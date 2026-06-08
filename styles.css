@@ -139,7 +139,7 @@ a {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.82) 38%, rgba(255, 255, 255, 0.34) 68%),
-    url("https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=2200&q=82") center right / cover;
+    url("https://mblogthumb-phinf.pstatic.net/MjAyMzA5MDlfMTI3/MDAxNjk0MjM2Nzk1MDQ3.YOUkknWCwRGl1ryWt_5hrXrDJLnjIbnlF645oQlgZTYg._cbtfhhuJIirKy9biCZNstTQwj428NfrDcVroS6W0oMg.JPEG.moonsun8219/croppedImage_VERSION2.jpg?type=w800") center right / cover;
 }
 
 .hero::after {
@@ -272,7 +272,9 @@ a {
 .highlight-grid,
 .service-grid,
 .facility-grid,
-.news-grid {
+.news-grid,
+.program-grid,
+.notice-grid {
   display: grid;
   gap: 20px;
 }
@@ -333,6 +335,36 @@ a {
 .about-copy p {
   margin: 0;
   color: var(--muted);
+}
+
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  background: var(--white);
+}
+
+.info-strip article {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #ffffff, #f8fcff);
+}
+
+.info-strip strong {
+  display: block;
+  color: var(--blue-dark);
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  line-height: 1.15;
+}
+
+.info-strip span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .about-section {
@@ -400,6 +432,45 @@ a {
   color: #27936f;
 }
 
+.program-section {
+  background: linear-gradient(180deg, #fff7fa, #ffffff);
+}
+
+.program-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.program-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 12px 35px rgba(31, 95, 159, 0.08);
+}
+
+.program-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.program-card div {
+  padding: 20px;
+}
+
+.program-card span {
+  color: var(--coral);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.program-card h3 {
+  margin: 8px 0 0;
+  color: #1b2940;
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+
 .facility-section {
   background: #f4faff;
 }
@@ -452,6 +523,32 @@ a {
   max-width: 980px;
 }
 
+.admission-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.admission-details article {
+  padding: 22px;
+  color: #244263;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: var(--radius);
+}
+
+.admission-details h3 {
+  margin: 0 0 8px;
+  color: var(--blue-dark);
+  font-size: 1.06rem;
+}
+
+.admission-details p {
+  margin: 0;
+  color: #40546f;
+}
+
 .step-list {
   display: flex;
   flex-wrap: wrap;
@@ -478,56 +575,104 @@ a {
   color: #ffd5de;
 }
 
-.contact-section {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.82fr) minmax(320px, 1fr);
-  gap: clamp(28px, 5vw, 56px);
-  align-items: stretch;
-  background: linear-gradient(180deg, #ffffff, #f5fbff);
-}
-
+.notice-section,
 .news-section {
   background: var(--white);
 }
 
+.notice-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.notice-card {
+  display: grid;
+  gap: 10px;
+  min-height: 250px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #ffffff, #f6fbff);
+  box-shadow: 0 12px 35px rgba(31, 95, 159, 0.08);
+}
+
+.notice-card svg {
+  width: 34px;
+  height: 34px;
+  color: var(--blue);
+}
+
+.notice-card span {
+  color: var(--coral);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.notice-card strong {
+  color: #1b2940;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.notice-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .news-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .news-card {
   display: flex;
   flex-direction: column;
-  min-height: 250px;
-  padding: 24px;
+  min-height: 390px;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: linear-gradient(180deg, #ffffff, #fbfdff);
   box-shadow: 0 12px 35px rgba(31, 95, 159, 0.08);
 }
 
+.news-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #eef5fb;
+}
+
 .news-card span {
+  display: block;
+  padding: 20px 22px 0;
   color: var(--coral);
   font-size: 0.84rem;
   font-weight: 800;
 }
 
 .news-card h3 {
-  margin: 14px 0 10px;
+  margin: 10px 22px 10px;
   color: #1b2940;
   font-size: 1.14rem;
 }
 
 .news-card p {
-  margin: 0;
+  margin: 0 22px;
   color: var(--muted);
 }
 
 .news-card a {
   display: inline-flex;
   margin-top: auto;
-  padding-top: 22px;
+  padding: 20px 22px 22px;
   color: var(--blue);
   font-weight: 800;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(320px, 1fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: stretch;
+  background: linear-gradient(180deg, #ffffff, #f5fbff);
 }
 
 .contact-list {
@@ -654,7 +799,13 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .news-grid {
+  .program-grid,
+  .news-grid,
+  .notice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .info-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -666,7 +817,7 @@ a {
     padding-top: 74px;
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(255, 255, 255, 0.24) 100%),
-      url("https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=82") center bottom / cover;
+      url("https://mblogthumb-phinf.pstatic.net/MjAyMzA5MDlfMTI3/MDAxNjk0MjM2Nzk1MDQ3.YOUkknWCwRGl1ryWt_5hrXrDJLnjIbnlF645oQlgZTYg._cbtfhhuJIirKy9biCZNstTQwj428NfrDcVroS6W0oMg.JPEG.moonsun8219/croppedImage_VERSION2.jpg?type=w800") center bottom / cover;
   }
 
   .hero-trust {
@@ -679,7 +830,11 @@ a {
   .highlight-grid,
   .service-grid,
   .facility-grid,
+  .program-grid,
+  .notice-grid,
   .news-grid,
+  .info-strip,
+  .admission-details,
   .about-section,
   .contact-section {
     grid-template-columns: 1fr;
