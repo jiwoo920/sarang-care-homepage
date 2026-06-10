@@ -400,6 +400,49 @@ a {
   font-size: 1.04rem;
 }
 
+.greeting-section {
+  background: linear-gradient(180deg, #ffffff, #fff7fa);
+}
+
+.greeting-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 22px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid rgba(240, 111, 130, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.greeting-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  color: #d84f66;
+  background: var(--pink);
+  border-radius: 50%;
+}
+
+.greeting-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.greeting-copy p {
+  margin: 0;
+  color: #40546f;
+  font-size: 1.04rem;
+}
+
+.greeting-copy p + p {
+  margin-top: 14px;
+}
+
 .text-link,
 .small-link {
   display: inline-flex;
@@ -973,6 +1016,10 @@ a {
   .step-list span,
   .button {
     width: 100%;
+  }
+
+  .greeting-card {
+    grid-template-columns: 1fr;
   }
 }
 
