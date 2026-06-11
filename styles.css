@@ -103,6 +103,33 @@ a {
   position: relative;
 }
 
+.nav-dropdown-split {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown-main {
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-dropdown-main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: var(--coral);
+  transition: width 180ms ease;
+}
+
+.nav-dropdown-main:hover::after,
+.nav-dropdown-split.is-open .nav-dropdown-main::after {
+  width: 100%;
+}
+
 .nav-dropdown-toggle {
   display: inline-flex;
   align-items: center;
@@ -112,6 +139,13 @@ a {
   background: transparent;
   border: 0;
   cursor: pointer;
+}
+
+.nav-dropdown-arrow {
+  width: 22px;
+  min-width: 22px;
+  height: 28px;
+  padding: 0;
 }
 
 .nav-dropdown-toggle::before {
@@ -676,6 +710,10 @@ a {
 
 .home-life-section {
   background: linear-gradient(180deg, #ffffff, #f7fbff);
+}
+
+.home-life-section .life-board {
+  padding: 0;
 }
 
 .home-life-list {
@@ -1468,10 +1506,24 @@ a {
     display: grid;
   }
 
+  .nav-dropdown-split {
+    grid-template-columns: 1fr auto;
+    gap: 0;
+  }
+
+  .nav-dropdown-main {
+    padding: 13px 10px;
+  }
+
   .nav-dropdown-toggle {
     justify-content: space-between;
     width: 100%;
     padding: 13px 10px;
+  }
+
+  .nav-dropdown-arrow {
+    width: 44px;
+    height: auto;
   }
 
   .nav-dropdown-menu {
