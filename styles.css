@@ -741,6 +741,27 @@ a {
   color: var(--muted);
 }
 
+.notice-card .notice-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  min-height: 38px;
+  margin-top: auto;
+  padding: 0 16px;
+  color: var(--white);
+  background: var(--blue);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.notice-card:hover .notice-more {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
 .news-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
