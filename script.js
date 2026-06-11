@@ -63,6 +63,44 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const lifeTabs = document.querySelectorAll("[data-life-tab]");
+const lifePanels = document.querySelectorAll("[data-life-panel]");
+
+const activateLifePanel = (panelName) => {
+  if (!lifeTabs.length || !lifePanels.length) {
+    return;
+  }
+
+  const targetPanelName = [...lifePanels].some((panel) => panel.dataset.lifePanel === panelName)
+    ? panelName
+    : lifePanels[0].dataset.lifePanel;
+
+  lifeTabs.forEach((tab) => {
+    tab.classList.toggle("is-active", tab.dataset.lifeTab === targetPanelName);
+  });
+
+  lifePanels.forEach((panel) => {
+    const isActive = panel.dataset.lifePanel === targetPanelName;
+    panel.classList.toggle("is-active", isActive);
+  });
+};
+
+lifeTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const panelName = tab.dataset.lifeTab;
+    activateLifePanel(panelName);
+    history.replaceState(null, "", `#${panelName}`);
+  });
+});
+
+if (lifeTabs.length) {
+  activateLifePanel(window.location.hash.replace("#", ""));
+}
+
+window.addEventListener("hashchange", () => {
+  activateLifePanel(window.location.hash.replace("#", ""));
+});
+
 document.querySelectorAll("[data-history-back]").forEach((link) => {
   link.addEventListener("click", (event) => {
     let isSameSiteReferrer = false;
