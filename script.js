@@ -15,6 +15,25 @@ if (menuToggle && primaryNav) {
   });
 }
 
+document.querySelectorAll("[data-history-back]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    let isSameSiteReferrer = false;
+
+    if (document.referrer) {
+      try {
+        isSameSiteReferrer = new URL(document.referrer).origin === window.location.origin;
+      } catch {
+        isSameSiteReferrer = false;
+      }
+    }
+
+    if (isSameSiteReferrer && window.history.length > 1) {
+      event.preventDefault();
+      window.history.back();
+    }
+  });
+});
+
 window.addEventListener("load", () => {
   if (window.lucide) {
     window.lucide.createIcons();
