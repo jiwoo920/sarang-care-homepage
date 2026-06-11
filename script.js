@@ -10,6 +10,10 @@ const closeDropdowns = (exceptDropdown) => {
 
     dropdown.classList.remove("is-open");
     dropdown.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
+    const menu = dropdown.querySelector(".nav-dropdown-menu");
+    if (menu) {
+      menu.hidden = true;
+    }
   });
 };
 
@@ -34,11 +38,15 @@ if (menuToggle && primaryNav) {
 
 navDropdowns.forEach((dropdown) => {
   const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+  const menu = dropdown.querySelector(".nav-dropdown-menu");
 
   toggle?.addEventListener("click", (event) => {
     event.stopPropagation();
     const isOpen = dropdown.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
+    if (menu) {
+      menu.hidden = !isOpen;
+    }
     closeDropdowns(dropdown);
   });
 });

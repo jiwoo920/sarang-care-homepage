@@ -126,7 +126,6 @@ a {
   transition: transform 160ms ease;
 }
 
-.nav-dropdown:hover .nav-dropdown-toggle::before,
 .nav-dropdown.is-open .nav-dropdown-toggle::before {
   transform: translateY(1px) rotate(180deg);
 }
@@ -155,8 +154,6 @@ a {
   height: 13px;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu,
 .nav-dropdown.is-open .nav-dropdown-menu {
   display: grid;
   gap: 4px;
@@ -1284,11 +1281,6 @@ a {
   }
 
   .nav-dropdown-menu::before {
-    display: none;
-  }
-
-  .nav-dropdown:hover .nav-dropdown-menu,
-  .nav-dropdown:focus-within .nav-dropdown-menu {
     display: none;
   }
 
