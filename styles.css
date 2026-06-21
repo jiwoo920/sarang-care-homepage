@@ -273,7 +273,6 @@ a {
 .service-grid,
 .facility-grid,
 .news-grid,
-.program-grid,
 .notice-grid {
   display: grid;
   gap: 20px;
@@ -430,45 +429,6 @@ a {
 
 .service-item:nth-child(3n) svg {
   color: #27936f;
-}
-
-.program-section {
-  background: linear-gradient(180deg, #fff7fa, #ffffff);
-}
-
-.program-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.program-card {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: 0 12px 35px rgba(31, 95, 159, 0.08);
-}
-
-.program-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-}
-
-.program-card div {
-  padding: 20px;
-}
-
-.program-card span {
-  color: var(--coral);
-  font-size: 0.84rem;
-  font-weight: 800;
-}
-
-.program-card h3 {
-  margin: 8px 0 0;
-  color: #1b2940;
-  font-size: 1.12rem;
-  line-height: 1.4;
 }
 
 .facility-section {
@@ -799,7 +759,6 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .program-grid,
   .news-grid,
   .notice-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -830,7 +789,6 @@ a {
   .highlight-grid,
   .service-grid,
   .facility-grid,
-  .program-grid,
   .notice-grid,
   .news-grid,
   .info-strip,
