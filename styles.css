@@ -272,7 +272,6 @@ a {
 .highlight-grid,
 .service-grid,
 .facility-grid,
-.news-grid,
 .notice-grid {
   display: grid;
   gap: 20px;
@@ -535,8 +534,7 @@ a {
   color: #ffd5de;
 }
 
-.notice-section,
-.news-section {
+.notice-section {
   background: var(--white);
 }
 
@@ -576,55 +574,6 @@ a {
 .notice-card p {
   margin: 0;
   color: var(--muted);
-}
-
-.news-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.news-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 390px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, #ffffff, #fbfdff);
-  box-shadow: 0 12px 35px rgba(31, 95, 159, 0.08);
-}
-
-.news-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  background: #eef5fb;
-}
-
-.news-card span {
-  display: block;
-  padding: 20px 22px 0;
-  color: var(--coral);
-  font-size: 0.84rem;
-  font-weight: 800;
-}
-
-.news-card h3 {
-  margin: 10px 22px 10px;
-  color: #1b2940;
-  font-size: 1.14rem;
-}
-
-.news-card p {
-  margin: 0 22px;
-  color: var(--muted);
-}
-
-.news-card a {
-  display: inline-flex;
-  margin-top: auto;
-  padding: 20px 22px 22px;
-  color: var(--blue);
-  font-weight: 800;
 }
 
 .contact-section {
@@ -759,7 +708,6 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .news-grid,
   .notice-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -790,7 +738,6 @@ a {
   .service-grid,
   .facility-grid,
   .notice-grid,
-  .news-grid,
   .info-strip,
   .admission-details,
   .about-section,
