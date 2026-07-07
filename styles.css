@@ -10,6 +10,9 @@
   --muted: #667085;
   --line: #dfe7ef;
   --white: #ffffff;
+  --ivory: #fffdf6;
+  --ivory-soft: #fffefa;
+  --ivory-warm: #fffaf0;
   --shadow: 0 16px 45px rgba(31, 95, 159, 0.13);
   --radius: 8px;
 }
@@ -26,7 +29,7 @@ body {
   margin: 0;
   font-family: "Noto Sans KR", Arial, sans-serif;
   color: var(--ink);
-  background: #fbfdff;
+  background: var(--ivory);
   line-height: 1.6;
 }
 
@@ -49,7 +52,7 @@ a {
   justify-content: space-between;
   min-height: 76px;
   padding: 14px clamp(20px, 5vw, 72px);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 253, 246, 0.94);
   border-bottom: 1px solid rgba(223, 231, 239, 0.78);
   backdrop-filter: blur(16px);
 }
@@ -252,7 +255,7 @@ a {
   padding: clamp(54px, 8vw, 120px) clamp(20px, 6vw, 86px);
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.82) 38%, rgba(255, 255, 255, 0.34) 68%),
+    linear-gradient(90deg, rgba(255, 253, 246, 0.95) 0%, rgba(255, 253, 246, 0.86) 38%, rgba(255, 253, 246, 0.34) 68%),
     url("https://mblogthumb-phinf.pstatic.net/MjAyMzA5MDlfMTI3/MDAxNjk0MjM2Nzk1MDQ3.YOUkknWCwRGl1ryWt_5hrXrDJLnjIbnlF645oQlgZTYg._cbtfhhuJIirKy9biCZNstTQwj428NfrDcVroS6W0oMg.JPEG.moonsun8219/croppedImage_VERSION2.jpg?type=w800") center right / cover;
 }
 
@@ -261,7 +264,7 @@ a {
   position: absolute;
   inset: auto 0 0;
   height: 28%;
-  background: linear-gradient(0deg, rgba(251, 253, 255, 1), rgba(251, 253, 255, 0));
+  background: linear-gradient(0deg, rgba(255, 253, 246, 1), rgba(255, 253, 246, 0));
 }
 
 .hero-content {
@@ -448,8 +451,7 @@ a {
 
 .feature-card p,
 .service-item p,
-.facility-card p,
-.about-copy p {
+.facility-card p {
   margin: 0;
   color: var(--muted);
 }
@@ -460,14 +462,14 @@ a {
   gap: 16px;
   padding-top: 34px;
   padding-bottom: 34px;
-  background: var(--white);
+  background: var(--ivory);
 }
 
 .info-strip article {
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, #ffffff, #f8fcff);
+  background: linear-gradient(180deg, var(--white), var(--ivory-soft));
 }
 
 .info-strip strong {
@@ -484,36 +486,8 @@ a {
   font-weight: 700;
 }
 
-.about-section {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.92fr) minmax(320px, 1fr);
-  gap: clamp(28px, 6vw, 72px);
-  align-items: center;
-  background: linear-gradient(110deg, var(--sky), #ffffff 52%, var(--pink));
-}
-
-.about-image {
-  min-height: 430px;
-  overflow: hidden;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  min-height: 430px;
-  object-fit: cover;
-}
-
-.about-copy p {
-  max-width: 680px;
-  margin-top: 18px;
-  font-size: 1.04rem;
-}
-
 .greeting-section {
-  background: linear-gradient(180deg, #ffffff, #fff7fa);
+  background: linear-gradient(180deg, var(--ivory-soft), #fff7fa);
 }
 
 .greeting-card {
@@ -566,7 +540,7 @@ a {
 }
 
 .service-section {
-  background: var(--white);
+  background: var(--ivory-soft);
 }
 
 .service-grid {
@@ -607,7 +581,7 @@ a {
   padding: 24px;
   border: 1px solid rgba(31, 95, 159, 0.16);
   border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--sky), #ffffff);
+  background: linear-gradient(135deg, #eef8fb, var(--ivory-soft));
   box-shadow: 0 12px 35px rgba(31, 95, 159, 0.08);
 }
 
@@ -633,7 +607,7 @@ a {
 }
 
 .facility-section {
-  background: #f4faff;
+  background: var(--ivory-warm);
 }
 
 .row-heading {
@@ -668,7 +642,7 @@ a {
 }
 
 .home-life-section {
-  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  background: linear-gradient(180deg, var(--ivory-soft), var(--ivory-warm));
 }
 
 .home-life-section .life-board {
@@ -835,7 +809,7 @@ a {
 }
 
 .notice-section {
-  background: var(--white);
+  background: var(--ivory-soft);
 }
 
 .notice-grid {
@@ -850,7 +824,7 @@ a {
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, #ffffff, #f6fbff);
+  background: linear-gradient(180deg, var(--white), var(--ivory-soft));
   box-shadow: 0 12px 35px rgba(31, 95, 159, 0.08);
 }
 
@@ -913,7 +887,7 @@ a {
   grid-template-columns: minmax(300px, 0.82fr) minmax(320px, 1fr);
   gap: clamp(28px, 5vw, 56px);
   align-items: stretch;
-  background: linear-gradient(180deg, #ffffff, #f5fbff);
+  background: linear-gradient(180deg, var(--ivory-soft), var(--ivory-warm));
 }
 
 .contact-list {
@@ -976,7 +950,7 @@ a {
   gap: 24px;
   padding: 28px clamp(20px, 6vw, 86px);
   color: #5c6a7f;
-  background: var(--white);
+  background: var(--ivory-soft);
   border-top: 1px solid var(--line);
 }
 
@@ -1006,7 +980,7 @@ a {
 }
 
 .detail-main {
-  background: linear-gradient(180deg, #f5fbff, #ffffff 220px);
+  background: linear-gradient(180deg, var(--ivory-warm), var(--ivory-soft) 220px);
 }
 
 .detail-hero {
@@ -1227,7 +1201,7 @@ a {
 }
 
 .life-main {
-  background: linear-gradient(180deg, #f5fbff, #ffffff 260px);
+  background: linear-gradient(180deg, var(--ivory-warm), var(--ivory-soft) 260px);
 }
 
 .life-hero {
@@ -1440,7 +1414,7 @@ a {
     min-width: 0;
     margin: 0 0 8px;
     padding: 6px;
-    background: #f8fcff;
+    background: var(--ivory-soft);
     box-shadow: none;
     transform: none;
   }
@@ -1505,7 +1479,7 @@ a {
     align-items: start;
     padding-top: 74px;
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(255, 255, 255, 0.24) 100%),
+      linear-gradient(180deg, rgba(255, 253, 246, 0.97) 0%, rgba(255, 253, 246, 0.9) 45%, rgba(255, 253, 246, 0.24) 100%),
       url("https://mblogthumb-phinf.pstatic.net/MjAyMzA5MDlfMTI3/MDAxNjk0MjM2Nzk1MDQ3.YOUkknWCwRGl1ryWt_5hrXrDJLnjIbnlF645oQlgZTYg._cbtfhhuJIirKy9biCZNstTQwj428NfrDcVroS6W0oMg.JPEG.moonsun8219/croppedImage_VERSION2.jpg?type=w800") center bottom / cover;
   }
 
@@ -1522,14 +1496,8 @@ a {
   .notice-grid,
   .info-strip,
   .admission-details,
-  .about-section,
   .contact-section {
     grid-template-columns: 1fr;
-  }
-
-  .about-image,
-  .about-image img {
-    min-height: 310px;
   }
 
   .row-heading,
