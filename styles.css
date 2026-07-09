@@ -548,6 +548,15 @@ main {
   background: transparent;
 }
 
+.service-section .section-heading {
+  max-width: none;
+}
+
+.service-section h2 {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
 .service-grid {
   grid-template-columns: repeat(6, minmax(130px, 1fr));
 }
@@ -1131,6 +1140,19 @@ main {
   border-radius: var(--radius);
 }
 
+.menu-image-stack {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.menu-image {
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+  background: var(--white);
+}
+
 .detail-list,
 .numbered-list {
   display: grid;
@@ -1250,11 +1272,13 @@ main {
 }
 
 .life-hero h1 {
-  max-width: 900px;
+  max-width: none;
   margin: 10px 0 14px;
   color: var(--ink);
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-size: clamp(2.35rem, 5.2vw, 4.55rem);
   line-height: 1.08;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .life-hero p {
@@ -1579,7 +1603,15 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .life-hero h1 {
+    white-space: normal;
+  }
+
   .notice-section h2 {
+    white-space: normal;
+  }
+
+  .service-section h2 {
     white-space: normal;
   }
 }
