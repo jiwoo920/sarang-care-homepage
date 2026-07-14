@@ -103,6 +103,12 @@ window.addEventListener("hashchange", () => {
 
 document.querySelectorAll("[data-history-back]").forEach((link) => {
   link.addEventListener("click", (event) => {
+    const targetHref = link.getAttribute("href") || "";
+
+    if (targetHref.includes("#")) {
+      return;
+    }
+
     let isSameSiteReferrer = false;
 
     if (document.referrer) {
