@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: clamp(190px, 14vw, 240px);
 }
 
 body {
@@ -46,6 +47,12 @@ a {
 
 main {
   background: linear-gradient(180deg, var(--ivory-soft) 0%, var(--ivory) 35%, var(--ivory-warm) 100%);
+}
+
+main section[id],
+.life-panel[id],
+.facility-grid[id] {
+  scroll-margin-top: clamp(190px, 14vw, 240px);
 }
 
 .site-header {
